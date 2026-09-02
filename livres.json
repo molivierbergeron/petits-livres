@@ -25,23 +25,5 @@
     "episode": null,
     "niveau": 2,
     "pages": 12
-  },
-  {
-    "ref": "semaines/2026-07-10",
-    "titre": "La rentrée de Simone",
-    "mode": "scolaire",
-    "serie": null,
-    "episode": null,
-    "niveau": 2,
-    "pages": 12
-  },
-  {
-    "ref": "semaines/2026-07-20",
-    "titre": "Simone et le lutin du sapin",
-    "mode": "scolaire",
-    "serie": null,
-    "episode": null,
-    "niveau": 2,
-    "pages": 16
   }
 ]
