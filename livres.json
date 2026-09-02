@@ -1,0 +1,47 @@
+[
+  {
+    "ref": "histoires/2026-09-01-lea-et-le-petit-renard-perdu",
+    "titre": "Léa et le petit renard perdu",
+    "mode": "plaisir",
+    "serie": null,
+    "episode": null,
+    "niveau": 2,
+    "pages": 8
+  },
+  {
+    "ref": "histoires/zoe-01-les-patins-neufs-de-zoe",
+    "titre": "Les patins neufs de Zoé",
+    "mode": "plaisir",
+    "serie": "Les quatre saisons de Zoé",
+    "episode": 1,
+    "niveau": 3,
+    "pages": 20
+  },
+  {
+    "ref": "semaines/2026-08-25",
+    "titre": "Léo et la grande boîte mystérieuse",
+    "mode": "scolaire",
+    "serie": null,
+    "episode": null,
+    "niveau": 2,
+    "pages": 12
+  },
+  {
+    "ref": "semaines/2026-07-10",
+    "titre": "La rentrée de Simone",
+    "mode": "scolaire",
+    "serie": null,
+    "episode": null,
+    "niveau": 2,
+    "pages": 12
+  },
+  {
+    "ref": "semaines/2026-07-20",
+    "titre": "Simone et le lutin du sapin",
+    "mode": "scolaire",
+    "serie": null,
+    "episode": null,
+    "niveau": 2,
+    "pages": 16
+  }
+]

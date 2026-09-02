@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Petits livres à imprimer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Des petits livres de lecture illustrés,
+ en français québécois, à télécharger et à imprimer en livret.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --papier:#f4f1ea; --carte:#fff; --carte2:#faf8f3; --encre:#23211e;
+    --encre2:#6b655c; --encre3:#9a938a; --trait:#e3ded3; --traitfort:#cdc5b6;
+    --accent:#b0412c; --accentdoux:#f6e7e2; --accentencre:#fff;
+    --ombre:0 1px 2px rgba(35,33,30,.05), 0 6px 20px rgba(35,33,30,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papier:#16151a; --carte:#1e1d23; --carte2:#24232a; --encre:#eceaf2;
+      --encre2:#a8a3b2; --encre3:#7c7688; --trait:#34323c; --traitfort:#46434f;
+      --accent:#e8836a; --accentdoux:#33231f; --accentencre:#1a1116;
+      --ombre:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--papier); color:var(--encre);
+    font:0.9375rem/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased; }
+  .large { max-width:70rem; margin:0 auto; padding:clamp(1.5rem,4vw,3rem) clamp(1rem,4vw,2rem) 5rem; }
+  header h1 { font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.15;
+    letter-spacing:-0.02em; margin:0 0 .5rem; }
+  header p { color:var(--encre2); max-width:42rem; margin:0 0 .4rem; }
+  .rayon { display:grid; gap:1rem; margin-top:2rem;
+    grid-template-columns:repeat(auto-fill,minmax(19rem,1fr)); }
+  .livre { display:flex; gap:.9rem; background:var(--carte);
+    border:1px solid var(--trait); border-radius:18px; padding:.9rem;
+    box-shadow:var(--ombre); }
+  .couv { flex:0 0 6.5rem; }
+  .couv img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block;
+    border-radius:10px; background:var(--carte2); }
+  .sans-image { width:100%; aspect-ratio:3/4; display:grid; place-items:center;
+    background:var(--carte2); border-radius:10px; font-size:2rem; }
+  .corps { display:flex; flex-direction:column; min-width:0; }
+  .livre h2 { font-size:1.0625rem; line-height:1.3; margin:0 0 .4rem;
+    letter-spacing:-0.01em; }
+  .etqs { display:flex; flex-wrap:wrap; gap:.3rem; margin-bottom:.45rem; }
+  .etq { font-size:.75rem; font-weight:700; padding:.12rem .5rem;
+    border-radius:999px; background:var(--carte2); color:var(--encre2);
+    border:1px solid var(--trait); }
+  .etq.serie { background:var(--accentdoux); color:var(--accent); border-color:transparent; }
+  .resume { font-size:.8125rem; color:var(--encre2); margin:0 0 .6rem;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;
+    overflow:hidden; }
+  .liens { margin-top:auto; display:flex; flex-wrap:wrap; gap:.4rem; }
+  .bouton { display:inline-block; font:inherit; font-size:.8125rem;
+    font-weight:600; text-decoration:none; padding:.4rem .8rem;
+    border-radius:8px; border:1px solid transparent;
+    background:var(--accent); color:var(--accentencre); }
+  .bouton.doux { background:var(--carte); color:var(--encre);
+    border-color:var(--traitfort); }
+  .bouton:hover { filter:brightness(1.07); }
+  details.impression { margin-top:1.5rem; background:var(--carte);
+    border:1px solid var(--trait); border-radius:18px; box-shadow:var(--ombre); }
+  details.impression > summary { cursor:pointer; padding:1rem 1.2rem;
+    font-weight:700; list-style:none; }
+  details.impression > summary::-webkit-details-marker { display:none; }
+  details.impression > summary::before { content:"🖨️  "; }
+  details.impression > summary::after { content:" ▾"; color:var(--encre3); }
+  details.impression[open] > summary::after { content:" ▴"; }
+  .conseils { padding:0 1.2rem 1.2rem; }
+  .conseil { display:flex; gap:.75rem; padding:.55rem 0;
+    border-top:1px solid var(--trait); }
+  .conseil b { flex:0 0 9rem; }
+  .conseil span { color:var(--encre2); }
+  .vide { color:var(--encre2); padding:3rem 0; text-align:center; }
+  footer { margin-top:3rem; padding-top:1.2rem; border-top:1px solid var(--trait);
+    color:var(--encre3); font-size:.8125rem; }
+  @media (max-width:30rem) { .livre { flex-direction:column; }
+    .couv { flex:none; max-width:9rem; } .conseil { flex-direction:column; gap:.15rem; } }
+</style>
+</head>
+<body>
+<div class="large">
+  <header>
+    <h1>Petits livres à imprimer</h1>
+    <p>Des histoires illustrées en français québécois, pour les lecteurs
+      débutants. Chaque livret se télécharge en PDF et s'imprime à la maison :
+      quelques feuilles, un pli, deux agrafes, et c'est un vrai petit livre.</p>
+    <p>Gratuit, sans compte, sans inscription.</p>
+  </header>
+
+  <details class="impression">
+    <summary>Comment imprimer un livret</summary>
+    <div class="conseils">
+      <p style="margin-top:0;color:var(--encre2)">Les pages sont déjà
+        placées dans le bon ordre pour être pliées en deux. Il n'y a rien à
+        réorganiser — seulement quatre réglages à cocher.</p>
+        <div class='conseil'><b>Recto verso</b><span>« Activé (côté court) » — surtout pas « Oui », qui relie par le bord long et met une page sur deux à l&#x27;envers.</span></div>
+        <div class='conseil'><b>Échelle</b><span>100 %. Pas « ajuster à la page » : les marges de reliure sont déjà calculées.</span></div>
+        <div class='conseil'><b>Papier</b><span>Lettre 8,5 × 11 po.</span></div>
+        <div class='conseil'><b>Couleur</b><span>activée, si votre imprimante en fait.</span></div>
+        <div class='conseil'><b>Après l&#x27;impression</b><span>pliez la pile en deux dans le sens de la largeur, et agrafez sur le pli.</span></div>
+      <p style="margin-bottom:0;color:var(--encre2);font-size:.8125rem">
+        Le réglage qui compte vraiment est le premier. Si les pages paires
+        sortent à l'envers, c'est qu'on a relié par le bord long : reprenez
+        avec « côté court ».</p>
+    </div>
+  </details>
+
+  <div class="rayon">
+      <article class="livre">
+        <div class="couv"><img src="livrets/histoires--2026-09-01-lea-et-le-petit-renard-perdu.jpg" alt="" loading="lazy"></div>
+        <div class="corps">
+          <h2>Léa et le petit renard perdu</h2>
+          <div class="etqs"><span class="etq">8 pages</span><span class="etq">niveau 2</span></div>
+          <p class="resume">Léa, 7 ans, trouve un petit renard perdu et apeuré dans la forêt derrière chez elle un matin d&#x27;automne. Elle suit ses traces jusqu&#x27;à un terrier et le réunit avec sa mère renarde avant la tombée de la nuit.</p>
+          <div class="liens">
+            <a class="bouton" href="livrets/histoires--2026-09-01-lea-et-le-petit-renard-perdu.pdf" download
+               title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
+            
+          </div>
+        </div>
+      </article>
+      <article class="livre">
+        <div class="couv"><img src="livrets/histoires--zoe-01-les-patins-neufs-de-zoe.jpg" alt="" loading="lazy"></div>
+        <div class="corps">
+          <h2>Les patins neufs de Zoé</h2>
+          <div class="etqs"><span class="etq serie">Les quatre saisons de Zoé · épisode 1</span><span class="etq">20 pages</span><span class="etq">niveau 3</span></div>
+          <p class="resume">Pour son premier hiver de sport nouveau, Zoé essaie le patin à l&#x27;aréna du centre communautaire avec son amie Nadia, tombe souvent et se décourage, puis retrouve son élan grâce à un petit signe de Grand-papa Gilles et à l&#x27;entraide de Nadia. Elle réussit finalement à glisser seule sur quelques pas et rentre fière raconter sa journée à Réglisse avant de s&#x27;endormir.</p>
+          <div class="liens">
+            <a class="bouton" href="livrets/histoires--zoe-01-les-patins-neufs-de-zoe.pdf" download
+               title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
+            
+          </div>
+        </div>
+      </article>
+      <article class="livre">
+        <div class="couv"><img src="livrets/semaines--2026-08-25.jpg" alt="" loading="lazy"></div>
+        <div class="corps">
+          <h2>Léo et la grande boîte mystérieuse</h2>
+          <div class="etqs"><span class="etq">12 pages</span><span class="etq">niveau 2</span></div>
+          
+          <div class="liens">
+            <a class="bouton" href="livrets/semaines--2026-08-25.pdf" download
+               title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
+            <a class="bouton doux" href="livrets/semaines--2026-08-25-cahier.pdf" download title="Feuilles d'exercices 8,5 × 11 — impression normale, recto seulement">Cahier d'écriture</a>
+          </div>
+        </div>
+      </article>
+      <article class="livre">
+        <div class="couv"><img src="livrets/semaines--2026-07-10.jpg" alt="" loading="lazy"></div>
+        <div class="corps">
+          <h2>La rentrée de Simone</h2>
+          <div class="etqs"><span class="etq">12 pages</span><span class="etq">niveau 2</span></div>
+          
+          <div class="liens">
+            <a class="bouton" href="livrets/semaines--2026-07-10.pdf" download
+               title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
+            <a class="bouton doux" href="livrets/semaines--2026-07-10-cahier.pdf" download title="Feuilles d'exercices 8,5 × 11 — impression normale, recto seulement">Cahier d'écriture</a>
+          </div>
+        </div>
+      </article>
+      <article class="livre">
+        <div class="couv"><img src="livrets/semaines--2026-07-20.jpg" alt="" loading="lazy"></div>
+        <div class="corps">
+          <h2>Simone et le lutin du sapin</h2>
+          <div class="etqs"><span class="etq">16 pages</span><span class="etq">niveau 2</span></div>
+          
+          <div class="liens">
+            <a class="bouton" href="livrets/semaines--2026-07-20.pdf" download
+               title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
+            
+          </div>
+        </div>
+      </article>
+  </div>
+
+  <footer>
+    <p>5 livrets ·
+       mis à jour le 1 septembre 2026</p>
+    <p>Histoires et illustrations produites avec l'aide de l'intelligence
+      artificielle, relues par un parent. Libres d'usage pour la lecture en
+      famille et en classe.</p>
+  </footer>
+</div>
+</body>
+</html>
