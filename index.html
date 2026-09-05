@@ -116,6 +116,7 @@
           <p class="resume">Au printemps, Zoé décide d&#x27;enlever les petites roues de son vélo et tombe plusieurs fois en essayant de garder l&#x27;équilibre dans la ruelle, malgré l&#x27;aide de Nadia et de Grand-papa Gilles. Après un dernier essai où Grand-papa lâche discrètement le siège, Zoé réussit enfin à rouler seule jusqu&#x27;au bout de la ruelle.</p>
           <div class="liens">
             <a class="bouton" href="livrets/histoires--zoe-02-zoe-sur-deux-roues.pdf" download
+               data-livre="histoires--zoe-02-zoe-sur-deux-roues" data-type="livret"
                title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
             
           </div>
@@ -129,6 +130,7 @@
           <p class="resume">Léa, 7 ans, trouve un petit renard perdu et apeuré dans la forêt derrière chez elle un matin d&#x27;automne. Elle suit ses traces jusqu&#x27;à un terrier et le réunit avec sa mère renarde avant la tombée de la nuit.</p>
           <div class="liens">
             <a class="bouton" href="livrets/histoires--2026-09-01-lea-et-le-petit-renard-perdu.pdf" download
+               data-livre="histoires--2026-09-01-lea-et-le-petit-renard-perdu" data-type="livret"
                title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
             
           </div>
@@ -142,6 +144,7 @@
           <p class="resume">Pour son premier hiver de sport nouveau, Zoé essaie le patin à l&#x27;aréna du centre communautaire avec son amie Nadia, tombe souvent et se décourage, puis retrouve son élan grâce à un petit signe de Grand-papa Gilles et à l&#x27;entraide de Nadia. Elle réussit finalement à glisser seule sur quelques pas et rentre fière raconter sa journée à Réglisse avant de s&#x27;endormir.</p>
           <div class="liens">
             <a class="bouton" href="livrets/histoires--zoe-01-les-patins-neufs-de-zoe.pdf" download
+               data-livre="histoires--zoe-01-les-patins-neufs-de-zoe" data-type="livret"
                title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
             
           </div>
@@ -155,8 +158,9 @@
           
           <div class="liens">
             <a class="bouton" href="livrets/semaines--2026-08-25.pdf" download
+               data-livre="semaines--2026-08-25" data-type="livret"
                title="Livret prêt à plier : imprimez recto verso, côté court, échelle 100 %">Télécharger le livret</a>
-            <a class="bouton doux" href="livrets/semaines--2026-08-25-cahier.pdf" download title="Feuilles d'exercices 8,5 × 11 — impression normale, recto seulement">Cahier d'écriture</a>
+            <a class="bouton doux" href="livrets/semaines--2026-08-25-cahier.pdf" download data-livre="semaines--2026-08-25" data-type="cahier" title="Feuilles d'exercices 8,5 × 11 — impression normale, recto seulement">Cahier d'écriture</a>
           </div>
         </div>
       </article>
@@ -164,11 +168,34 @@
 
   <footer>
     <p>4 livrets ·
-       mis à jour le 1 septembre 2026</p>
+       mis à jour le 5 septembre 2026</p>
     <p>Histoires et illustrations produites avec l'aide de l'intelligence
       artificielle, relues par un parent. Libres d'usage pour la lecture en
       famille et en classe.</p>
   </footer>
 </div>
+
+<script>
+  if (new URLSearchParams(location.search).has('owner'))
+    localStorage.setItem('gc-owner','1');
+  window.goatcounter = {
+    path: function(p) {
+      return localStorage.getItem('gc-owner') ? 'owner'+p : p;
+    }
+  };
+</script>
+<script data-goatcounter="https://mobergeron.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<script type="module">
+  import { track, trackVisit } from './analytics.js';
+  trackVisit('fascicules');
+
+  document.querySelector('.rayon')?.addEventListener('click', (ev) => {
+    const lien = ev.target.closest('a[data-livre]');
+    if (!lien) return;
+    const livre = lien.dataset.livre, type = lien.dataset.type;
+    track(`fascicules-download-${type}-${livre}`, { livre, type });
+  });
+</script>
 </body>
 </html>
