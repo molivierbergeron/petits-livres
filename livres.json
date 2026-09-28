@@ -1,5 +1,14 @@
 [
   {
+    "ref": "histoires/zoe-03-le-tresor-du-sentier",
+    "titre": "Le trésor du sentier",
+    "mode": "plaisir",
+    "serie": "Les quatre saisons de Zoé",
+    "episode": 3,
+    "niveau": 2,
+    "pages": 16
+  },
+  {
     "ref": "histoires/zoe-02-zoe-sur-deux-roues",
     "titre": "Zoé sur deux roues",
     "mode": "plaisir",
