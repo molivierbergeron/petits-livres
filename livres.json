@@ -1,5 +1,14 @@
 [
   {
+    "ref": "histoires/zoe-04-le-costume-envole-de-zoe",
+    "titre": "Le costume envolé de Zoé",
+    "mode": "plaisir",
+    "serie": "Les quatre saisons de Zoé",
+    "episode": 4,
+    "niveau": 2,
+    "pages": 24
+  },
+  {
     "ref": "histoires/zoe-03-le-tresor-du-sentier",
     "titre": "Le trésor du sentier",
     "mode": "plaisir",
