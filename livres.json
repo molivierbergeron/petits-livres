@@ -1,5 +1,14 @@
 [
   {
+    "ref": "histoires/zoe-05-zoe-et-le-ballon-poire-rebelle",
+    "titre": "Zoé et le ballon-poire rebelle",
+    "mode": "plaisir",
+    "serie": "Les quatre saisons de Zoé",
+    "episode": 5,
+    "niveau": 2,
+    "pages": 20
+  },
+  {
     "ref": "histoires/zoe-04-le-costume-envole-de-zoe",
     "titre": "Le costume envolé de Zoé",
     "mode": "plaisir",
