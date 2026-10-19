@@ -1,5 +1,14 @@
 [
   {
+    "ref": "histoires/zoe-06-le-lapin-qui-a-choisi-zoe",
+    "titre": "Le lapin qui a choisi Zoé",
+    "mode": "plaisir",
+    "serie": "Les quatre saisons de Zoé",
+    "episode": 6,
+    "niveau": 3,
+    "pages": 20
+  },
+  {
     "ref": "histoires/zoe-05-zoe-et-le-ballon-poire-rebelle",
     "titre": "Zoé et le ballon-poire rebelle",
     "mode": "plaisir",
